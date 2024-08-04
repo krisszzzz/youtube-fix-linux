@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 # require networkManager to acquire wifi device
-NET_IFACE=$(nmcli --get-values GENERAL.DEVICE,GENERAL.TYPE device show | grep -B 2 wifi | head -1)
+NET_IFACE=$(nmcli --get-values GENERAL.DEVICE,GENERAL.TYPE device show | grep -B 1 wifi | head -1)
 
 # path to zapret binaries, change for coresponding arch
 ZAPRET_BIN=zapret/binaries/x86_64
